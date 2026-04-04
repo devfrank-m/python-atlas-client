@@ -1,0 +1,14 @@
+[project]
+name = "atlas-client"
+version = "0.0.1"
+description = "The Python client for the Atlas vector database"
+requires-python = ">=3.14"
+dependencies = [
+    "httpx>=0.28.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.3.1",
+    "ruff>=0.15.6",
+]
