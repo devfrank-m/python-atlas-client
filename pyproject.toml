@@ -1,14 +1,53 @@
 [project]
-name = "atlas-client"
+name = "atlas-db-client"
 version = "0.0.1"
 description = "The Python client for the Atlas vector database"
-requires-python = ">=3.14"
-dependencies = [
-    "httpx>=0.28.0",
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "devfrank-m" },
 ]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+keywords = ["atlas", "vector", "database", "client", "embeddings"]
+
+[project.urls]
+Homepage = "https://github.com/devfrank-m/python-atlas-client"
+Repository = "https://github.com/devfrank-m/python-atlas-client"
+Issues = "https://github.com/devfrank-m/python-atlas-client/issues"
 
 [dependency-groups]
 dev = [
     "black>=26.3.1",
     "ruff>=0.15.6",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.backends"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+version_variables = ["atlas/__init__.py:__version__"]
+branch = "main"
+build_command = "pip install build && python -m build"
+commit_message = "chore(release): v{version}"
+
+[tool.semantic_release.changelog]
+changelog_file = "CHANGELOG.md"
+
+[tool.semantic_release.remote]
+type = "github"
+token = { env = "GH_TOKEN" }

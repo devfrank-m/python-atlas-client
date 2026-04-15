@@ -5,7 +5,7 @@ from typing import Any
 import httpx
 
 from ._base import (
-    DEFAULT_BASE_URL,
+    DEFAULT_HOST,
     DEFAULT_TIMEOUT,
     _build_client_kwargs,
     _build_create_body,
@@ -22,13 +22,13 @@ from ._models import Collection, Filter, SearchResponse, VectorInsertResult
 class AtlasClient:
     def __init__(
         self,
-        base_url: str = DEFAULT_BASE_URL,
+        host: str = DEFAULT_HOST,
         timeout: float = DEFAULT_TIMEOUT,
         headers: dict[str, str] | None = None,
         **kwargs: Any,
     ) -> None:
         self._client = httpx.Client(
-            **_build_client_kwargs(base_url, timeout, headers, **kwargs)
+            **_build_client_kwargs(host, timeout, headers, **kwargs)
         )
 
     def _request(self, method: str, path: str, **kwargs: Any) -> dict[str, Any]:

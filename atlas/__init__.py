@@ -1,3 +1,5 @@
+__version__ = "0.1.0"
+
 from ._async_client import AsyncAtlasClient
 from ._client import AtlasClient
 from ._exceptions import AtlasError, NotFoundError, ValidationError
