@@ -5,7 +5,7 @@ The Python client for the [Atlas](https://github.com/devfrank-m/atlas) vector da
 ## Installation
 
 ```bash
-pip install atlas-client
+pip install atlas-db-client
 ```
 
 ## Quick Start
