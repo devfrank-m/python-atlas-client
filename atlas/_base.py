@@ -13,12 +13,12 @@ from ._models import (
     VectorInsertResult,
 )
 
-DEFAULT_BASE_URL = "http://localhost:8600"
+DEFAULT_HOST = "http://localhost:8600"
 DEFAULT_TIMEOUT = 30.0
 
 
 def _build_client_kwargs(
-    base_url: str,
+    host: str,
     timeout: float,
     headers: dict[str, str] | None,
     **kwargs: Any,
@@ -26,7 +26,7 @@ def _build_client_kwargs(
     h = {"Content-Type": "application/json"}
     if headers:
         h.update(headers)
-    return {"base_url": base_url, "timeout": timeout, "headers": h, **kwargs}
+    return {"base_url": host, "timeout": timeout, "headers": h, **kwargs}
 
 
 def _raise_for_status(response: httpx.Response) -> None:
