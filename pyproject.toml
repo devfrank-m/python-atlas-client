@@ -1,6 +1,6 @@
 [project]
 name = "atlas-db-client"
-version = "0.0.1"
+version = "0.0.2"
 description = "The Python client for the Atlas vector database"
 readme = "README.md"
 license = "MIT"
@@ -27,6 +27,7 @@ keywords = ["atlas", "vector", "database", "client", "embeddings"]
 Homepage = "https://github.com/devfrank-m/python-atlas-client"
 Repository = "https://github.com/devfrank-m/python-atlas-client"
 Issues = "https://github.com/devfrank-m/python-atlas-client/issues"
+
 
 
 [dependency-groups]

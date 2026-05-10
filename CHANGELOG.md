@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.0.2 (2026-05-10)
+
+### Bug Fixes
+
+- Fmt checks on github ci workflow
+  ([`d9a5c4c`](https://github.com/devfrank-m/python-atlas-client/commit/d9a5c4c9aaaf59293270eaaf39f29938bedc3506))
+
+fix: fmt checks on github ci workflow
+
+
 ## v0.0.1 (2026-05-10)
 
 ### Bug Fixes
