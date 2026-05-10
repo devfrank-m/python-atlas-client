@@ -11,7 +11,7 @@ pip install atlas-db-client
 ## Quick Start
 
 ```python
-from atlas import AtlasClient
+from atlas_db_client import AtlasClient
 
 client = AtlasClient(host="http://localhost:8600")
 
@@ -43,7 +43,7 @@ for r in response.results:
 ## Async Support
 
 ```python
-from atlas import AsyncAtlasClient
+from atlas_db_client import AsyncAtlasClient
 
 async with AsyncAtlasClient() as client:
     collection = await client.create_collection(
