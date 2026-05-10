@@ -15,5 +15,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install ruff black
-      - run: ruff check atlas/
-      - run: black --check atlas/
+      - run: ruff check atlas_db_client/
+      - run: black --check atlas_db_client/
