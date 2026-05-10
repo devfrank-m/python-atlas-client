@@ -1,4 +1,4 @@
-__version__ = "0.1.0"
+__version__ = "0.0.1"
 
 from ._async_client import AsyncAtlasClient
 from ._client import AtlasClient

@@ -28,6 +28,7 @@ Homepage = "https://github.com/devfrank-m/python-atlas-client"
 Repository = "https://github.com/devfrank-m/python-atlas-client"
 Issues = "https://github.com/devfrank-m/python-atlas-client/issues"
 
+
 [dependency-groups]
 dev = [
     "black>=26.3.1",
